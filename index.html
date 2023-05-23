@@ -3,38 +3,35 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="examen coffe shop" />
+        <meta name="author" content="luis Torres" />
         <title>Zumbambico Coffe Shop</title>
-        <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./img/icon.jpeg" />
-        <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
+    <body data-bs-theme="light">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary  bg-dark text-light fixed-top">
+            <div class="container-fluid px-4 px-lg-5">
+                <button onclick="cambiarTema()" class="btn btn-light"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
                 <a class="navbar-brand" href="#!">Cafeteria Zumbambico</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Productos</a></li>
+                                <li><a class="dropdown-item" href="#productos">Productos</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Populares Item</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#destacados">Populares Item</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
+                        <button class="btn btn-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
@@ -43,10 +40,9 @@
                 </div>
             </div>
         </nav>
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div id="carouselExampleDark" class="carousel carousel-light slide">
+        <header >
+            <div>
+                <div id="carouselExampleDark" class="carousel slide" data-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -54,17 +50,17 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="2000">
-                        <img src="./img/b1.jpeg" class="d-block w-100" alt="...">
+                        <img src="./img/b1.jpeg" class="d-block w-100" alt="bg1">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>First slide label</h5>
-                          <p>Some representative placeholder content for the first slide.</p>
+                          <h5>Pan Con Cafesito</h5>
+                          <p>Es el original!! del que todos hablan en interner</p>
                         </div>
                       </div>
                       <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./img/b2.jpeg" class="d-block w-100" alt="">
+                        <img src="./img/b2.jpeg" class="d-block w-100" alt="bg2">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>Second slide label</h5>
-                          <p>Some representative placeholder content for the second slide.</p>
+                          <h5>Pan Fresco</h5>
+                          <p>Más Fresco que Culo de Pingüino</p>
                         </div>
                       </div>
                     </div>
@@ -79,78 +75,61 @@
                   </div>
         </header>
         <!-- Section-->
-        <section class="py-5">
+        <section class="py-5" id="productos">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-5 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="./img/1.jpeg" alt="..." />
-                            <!-- Product details-->
+                            <img class="card-img-top" src="./img/1.jpg" alt="img1" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Galletas de chocolate</h5>
-                                    <!-- Product price-->
-                                    $10.000 cop
+                                    <h5 class="fw-bolder">Galletas de Chocolate</h5>
+                                    <p class="card-text">Deliciosas galletas de chocolate que te harán perder el control.</p>
+                                    $10.000 Cop
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/2.jpeg" alt="imagen2" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Macarons</h5>
-                                    <!-- Product price-->
+                                    <p class="card-text">Exquisitos macarons de chocolate, una tentación irresistiblemente dulce y suave</p>
                                     $5.000 c/u cop
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="./img/3.jpeg" alt="imagen3" />
-                            <!-- Product details-->
+                            <img class="card-img-top" src="./img/3.jpg" alt="imagen3"/>
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Cheescake de Fresa</h5>
-                                    <!-- Product price-->
+                                    <p class="card-text">Cheesecake de fresa: el deleite perfecto que despierta tus sentidos</p>
                                     $8.000 Porcion
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/4.jpeg" alt="imagen4" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Torta red velvet</h5>
-                                    <!-- Product reviews-->
+                                    <h5 class="fw-bolder">Torta Red Velvet</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -158,49 +137,39 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    <!-- Product price-->
+                                    <p class="card-text">La torta Red Velvet, un placer seductor en cada bocado</p>
                                     <span class="text-muted text-decoration-line-through">$15.000</span>
                                     $9.000
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/5.jpeg" alt="imagen5" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Pastel de chocolate</h5>
-                                    <!-- Product price-->
+                                    <p class="card-text">Un deleite irresistible el dulce sabor de un exquisito postre</p>
                                     <span class="text-muted text-decoration-line-through">$15.000</span>
                                     $8.000 cop
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/6.jpeg" alt="imagen6" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Cupcakes</h5>
-                                    <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -208,35 +177,29 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    <!-- Product price-->
+                                    <p class="card-text">Cupcakes deliciosos, una explosión de sabor en cada mordisco</p>
                                     $8.500 c/u
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/7.jpeg" alt="imagen7" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Croissant</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$6.000</span>
-                                    $4.000
+                                    <p class="card-text">Croissant irresistible: el placer crujiente que te transporta a Francia</p>
+                                    <span class="text-muted text-decoration-line-through fw-bold ">$6.000</span>
+                                    <span class="text-muted  fw-bold">$4.000</span>
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
@@ -321,6 +284,246 @@
                 </div>
             </div>
         </section>
+    </section>
+    <section class="banner">
+
+    </section>
+
+
+
+
+    <section class=container px-4 px-lg-5 mt-5 id="destacados">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-5 justify-content-center">
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">New york Rolls</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">$6.000</span>
+                        $5.000
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">New york Rolls</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">$6.000</span>
+                        $5.000
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">New york Rolls</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">$6.000</span>
+                        $5.000
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">New york Rolls</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">$6.000</span>
+                        $5.000
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">New york Rolls</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">$6.000</span>
+                        $5.000
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="banner2">
+
+    </section>
+    <section id="About">
+      <div class="container mt-3">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-5 align-self-center">
+            <form>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="bi bi-person-circle"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="bi bi-envelope-at-fill"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="correo" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="bi bi-telephone-fill"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="telefono" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="bi bi-calendar-date-fill"></i>
+                    </span>
+                    <input type="date" class="form-control" placeholder="fecha" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="bi bi-clock-fill"></i>
+                    </span>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>selecione hora</option>
+                      <option value="1">1pm - 2pm</option>
+                      <option value="2">3pm - 4pm</option>
+                      <option value="3">5pm - 6pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-md-3">
+            <h3>CONTACTANOS</h3>
+            <P>SOMOS LOS MEJORES........</P>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63456.70989431944!2d-75.6756365783203!3d6.257886000000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297188fbb229%3A0x656943c94a762172!2sBIMBO%20Expendio!5e0!3m2!1ses!2sco!4v1684882090017!5m2!1ses!2sco" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright 2023</p></div>
