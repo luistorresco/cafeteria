@@ -1,5 +1,5 @@
 
-# Bootstrap E-commerce Project: Dark Mode
+# Bootstrap E-commerce
 
 Project Description
 In this project, we will create an e-commerce website using the Bootstrap framework. The store will have a responsive design and an elegant
