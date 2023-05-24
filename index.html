@@ -1,255 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="examen coffe shop" />
-        <meta name="author" content="luis Torres" />
-        <title>Zumbambico Coffe Shop</title>
-        <link rel="icon" type="image/x-icon" href="./img/icon.jpeg" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/styles.css">
-    </head>
-    <body data-bs-theme="light">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary  bg-dark text-light fixed-top">
-            <div class="container-fluid px-4 px-lg-5">
-                <button onclick="cambiarTema()" class="btn btn-light"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
-                <a class="navbar-brand" href="#carouselExampleDark">Cafeteria Zumbambico</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#carouselExampleDark">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#About">Domicilios</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#productos">Productos</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#destacados">Populares Item</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-light" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Compras
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="examen coffe shop" />
+    <meta name="author" content="luis Torres" />
+    <title>L'Art du Café</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.jpeg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  bg-dark text-light fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <button onclick="cambiarTema()" class="btn btn-light"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
+            <a class="navbar-brand" href="#carouselExampleDark">L'Art du Café</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="#About">Domicilios</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#productos">Productos</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#destacados">Productos Destacados</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-light" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Compras
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
             </div>
-        </nav>
-        <header >
-            <div>
-                <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="2000">
+        </div>
+    </nav>
+    <header>
+        <div>
+            <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
                         <img src="./img/b1.jpeg" class="d-block w-100" alt="bg1">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>Coffe & Croissant</h5>
-                          <p>¡Descubre una experiencia única con nuestro Coffe & Croissant! </p>
+                            <h5>Coffe & Croissant</h5>
+                            <p>¡Descubre una experiencia gastronomica única con nuestros productos! </p>
                         </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
                         <img src="./img/b2.jpeg" class="d-block w-100" alt="bg2">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>Pan Fresco</h5>
-                          <p>Descubre la frescura y el sabor incomparables en nuestra panadería.</p>
+                            <h5>Recien Horneados</h5>
+                            <p>Descubre la frescura y el sabor incomparables en nuestra panadería.</p>
                         </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
                         <img src="./img/coffe2.jpeg" class="d-block w-100" alt="bg3">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>Premium Coffee</h5>
-                          <p>Sumérgete en un mundo de sabores refinados y aromas cautivadores.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-        </header>
-        <!-- Section-->
-        <section class="py-5" id="productos">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-5 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/1.jpg" alt="img1" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Galletas con Chocolate</h5>
-                                    <p class="card-text">Irresistibles galletas de chocolate, un placer para tus sentidos.</p> <br>
-                                    <span class="text-muted  fw-bold">$10.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
+                            <h5>Premium Coffee</h5>
+                            <p>Sumérgete en un mundo de sabores refinados y aromas cautivadores.</p>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/2.jpeg" alt="imagen2" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Macarons</h5>
-                                    <p class="card-text">Exquisitos macarons de chocolate, una tentación irresistible, suave y deliciosa</p> <br>
-                                    <span class="text-muted  fw-bold">$5.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/3.jpg" alt="imagen3"/>
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Cheescake de Fresa</h5>
-                                    <p class="card-text">Cheesecake de fresa: el deleite perfecto que despierta tus sentidos</p> <br>
-                                    <span class="text-muted  fw-bold">$8.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/4.jpeg" alt="imagen4" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Torta Red Velvet</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                    </div>
-                                    <p class="card-text">Un sueño esponjoso y seductor hecho realidad en forma de una torta Red Velvet</p>
-                                    <span class="text-muted text-decoration-line-through">$15.000</span> <br>
-                                    <span class="text-muted  fw-bold">$9.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5" id="productos">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-5 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/1.jpg" alt="img1" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Galletas con Chocolate</h5>
+                                <p class="card-text">Irresistibles galletas de chocolate, un placer para tus sentidos.
+                                </p> <br>
+                                <span class="text-muted  fw-bold">$10.000</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/5.jpeg" alt="imagen5" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Pastel de Chocolate</h5>
-                                    <p class="card-text">Sumérgete en una experiencia celestial con el dulce sabor de nuestro exquisito postre.</p>
-                                    <span class="text-muted text-decoration-line-through">$10.000</span><br>
-                                    <span class="text-muted  fw-bold">$8.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/6.jpeg" alt="imagen6" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Cupcakes</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                    </div>
-                                    <p class="card-text">Imagina un pequeño tesoro de placer en forma de un cupcake. Con su aspecto encantador y seductor, es nuestra obra maestra.</p>
-                                    <span class="text-muted  fw-bold">$8.500</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/2.jpeg" alt="imagen2" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Macarons</h5>
+                                <p class="card-text">Exquisitos macarons de chocolate, una tentación irresistible, suave
+                                    y deliciosa</p> <br>
+                                <span class="text-muted  fw-bold">$5.000</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/7.jpeg" alt="imagen7" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Croissant</h5>
-                                    <p class="card-text">Una obra maestra de la repostería francesa que te transporta a las calles de París con cada bocado. Disfutalos por solo:</p>
-                                    <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                                    <span class="text-muted  fw-bold">$4.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/89.jpg" alt="imagen8" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Brownie con Arandanos</h5>
-                                    <p class="card-text">Endulza tu tarde con este rico Brownie con Arandanos para cambiar los sabores tradicionales y disfrutar de una rica preparación.</p>
-                                    <span class="text-muted  fw-bold">$12.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/3.jpg" alt="imagen3" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cheescake de Fresa</h5>
+                                <p class="card-text">Cheesecake de fresa: el deleite perfecto que despierta tus sentidos
+                                </p> <br>
+                                <span class="text-muted  fw-bold">$8.000</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">New York Rolls</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                    </div>
-                                    <p class="card-text">Cada rollo es un bocado de deleite que combina texturas y sabores en perfecta armonía.</p>
-                                    <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                                    <span class="text-muted  fw-bold">$5.000</span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
-                            </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="./img/10.jpeg" alt="imagen10" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Cannoli</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                    </div>
-                                    <p class="card-text">Este postre italiano cautivará tus sentidos y te transportará a las calles de Sicilia con sabores y texturas inigualables.</p><br>
-                                    <span class="text-muted  fw-bold">$5.000</span>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/4.jpeg" alt="imagen4" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Torta Red Velvet</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
                                 </div>
+                                <p class="card-text">Un sueño esponjoso y seductor hecho realidad en forma de una torta
+                                    Red Velvet</p>
+                                <span class="text-muted text-decoration-line-through">$15.000</span> <br>
+                                <span class="text-muted  fw-bold">$10.000</span>
                             </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/5.jpeg" alt="imagen5" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Pastel de Chocolate</h5>
+                                <p class="card-text">Sumérgete en una experiencia celestial con el dulce sabor de
+                                    nuestro exquisito postre.</p>
+                                <span class="text-muted text-decoration-line-through">$10.000</span><br>
+                                <span class="text-muted  fw-bold">$8.000</span>
                             </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/6.jpeg" alt="imagen6" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cupcakes</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                </div>
+                                <p class="card-text">Imagina un pequeño tesoro de placer en forma de un cupcake. Con su
+                                    aspecto encantador y seductor, es nuestra obra maestra.</p>
+                                <span class="text-muted  fw-bold">$8.500</span>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/7.jpeg" alt="imagen7" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Croissant</h5>
+                                <p class="card-text">Una obra maestra de la repostería francesa que te transporta a las
+                                    calles de París con cada bocado. Disfutalos por solo:</p>
+                                <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                                <span class="text-muted  fw-bold">$4.000</span>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/89.jpg" alt="imagen8" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Brownie con Arandanos</h5>
+                                <p class="card-text">Endulza tu tarde con este rico Brownie con Arandanos para cambiar
+                                    los sabores tradicionales y disfrutar de una rica preparación.</p>
+                                <span class="text-muted  fw-bold">$12.000</span>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">New York Rolls</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                </div>
+                                <p class="card-text">Cada rollo es un bocado de deleite que combina texturas y sabores
+                                    en perfecta armonía.</p>
+                                <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                                <span class="text-muted  fw-bold">$5.000</span>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./img/10.jpeg" alt="imagen10" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Cannoli</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                </div>
+                                <p class="card-text">Este postre italiano cautivará tus sentidos y te transportará a las
+                                    calles de Sicilia con sabores y texturas inigualables.</p><br>
+                                <span class="text-muted  fw-bold">$5.000</span>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </section>
     <section class="banner">
 
@@ -260,270 +282,249 @@
 
     <section class=container px-4 px-lg-5 mt-5 id="destacados">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-5 justify-content-center">
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Sale badge-->
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                <!-- Product image-->
-                <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">Item #1</h5>
-                        <!-- Product reviews-->
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Item #1</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                            <span class="text-muted  fw-bold">$5.000</span>
                         </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$6.000</span><br>                        
-                        <span class="text-muted  fw-bold">$5.000</span>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                     </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
-                </div>
             </div>
-        </div>
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Sale badge-->
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                <!-- Product image-->
-                <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">Item #2</h5>
-                        <!-- Product reviews-->
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Item #2</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                            <span class="text-muted  fw-bold">$5.000</span>
                         </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                        <span class="text-muted  fw-bold">$5.000</span>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                     </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
-                </div>
             </div>
-        </div>
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Sale badge-->
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                <!-- Product image-->
-                <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">Item #3</h5>
-                        <!-- Product reviews-->
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Item #3</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                            <span class="text-muted  fw-bold">$5.000</span>
                         </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                        <span class="text-muted  fw-bold">$5.000</span>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                     </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
-                </div>
             </div>
-        </div>
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Sale badge-->
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                <!-- Product image-->
-                <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">Item #4</h5>
-                        <!-- Product reviews-->
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Item #4</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                            <span class="text-muted  fw-bold">$5.000</span>
                         </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                        <span class="text-muted  fw-bold">$5.000</span>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                     </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
-                </div>
             </div>
-        </div>
-        <div class="col mb-5">
-            <div class="card h-100">
-                <!-- Sale badge-->
-                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                <!-- Product image-->
-                <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">Item #5</h5>
-                        <!-- Product reviews-->
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <img class="card-img-top" src="./img/Coffee-Shop.jpg" alt="imagen9" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Item #5</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
+                            <span class="text-muted text-decoration-line-through">$6.000</span><br>
+                            <span class="text-muted  fw-bold">$5.000</span>
                         </div>
-                        <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$6.000</span><br>
-                        <span class="text-muted  fw-bold">$5.000</span>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-secondary" href="#">Comprar</a></div>
                     </div>
                 </div>
-                <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
-                </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="banner2">
 
     </section>
     <section id="About">
-      <div class="container mt-3">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-5 align-self-center">
-            <form>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="bi bi-person-circle"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 align-self-center">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-person-circle"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-envelope-at"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="correo" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-telephone-fill"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="telefono" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-calendar-date-fill"></i>
+                                    </span>
+                                    <input type="date" class="form-control" placeholder="fecha" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="bi bi-clock-fill"></i>
+                                    </span>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>selecione hora</option>
+                                        <option value="1">1pm - 2pm</option>
+                                        <option value="2">3pm - 4pm</option>
+                                        <option value="3">5pm - 6pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="bi bi-signpost-split"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="direccion" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                        <i class="bi bi-envelope-at"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="correo" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="bi bi-telephone-fill"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="telefono" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="bi bi-calendar-date-fill"></i>
-                    </span>
-                    <input type="date" class="form-control" placeholder="fecha" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="bi bi-clock-fill"></i>
-                    </span>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>selecione hora</option>
-                      <option value="1">1pm - 2pm</option>
-                      <option value="2">3pm - 4pm</option>
-                      <option value="3">5pm - 6pm</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">
-                        <i class="bi bi-signpost-split"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="direccion"
-                        aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <button type="button" class="btn btn-success">Enviar</button>
-              </div>
-            </form>
-          </div>
-          <div class="col-12 col-md-3">
-            <h3>CONTACTECNOS</h3>
-            <P>Somos el mejor coffe shop de la ciudad...</P>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.98224123633!2d-75.66605080008834!3d6.243202309796886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442859d833cfa3%3A0xa3fca5c91547777f!2sCESDE!5e0!3m2!1ses!2sco!4v1684891893413!5m2!1ses!2sco" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-        <!-- Footer-->
-        <footer class="py-2 bg-secondary">
-            <div class="container text-center">
-                <div class="row align-items-center">
-              <div class="col">
-                <p class="m-0 text-center text-white">Luis Fernando Torres Correa</p>
-                <i class="bi bi-github bi-lg"></i>
-              </div>
-              <div class="col">
-                <p class="m-0 text-center text-white">Katherin Velez</p>
-                <i class="bi bi-github bi-lg"></i>
-              </div>
-              <div class="col">
-                <p class="m-0 text-center text-white">Nestor Fabian Zapata</p>
-                <i class="bi bi-github bi-lg"></i>
-              </div>
-              <div class="col">
-                <p class="m-0 text-center text-white">Cristian Camilo Mesa</p>
-                <i class="bi bi-github bi-lg"></i>
-              </div>
+                <div class="col-12 col-md-3">
+                    <h3>CONTACTECNOS</h3>
+                    <P>Somos el mejor coffe shop de la ciudad...</P>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.98224123633!2d-75.66605080008834!3d6.243202309796886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442859d833cfa3%3A0xa3fca5c91547777f!2sCESDE!5e0!3m2!1ses!2sco!4v1684891893413!5m2!1ses!2sco"
+                        width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-2 bg-secondary">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <p class="m-0 text-center text-white">Luis Fernando Torres Correa</p>
+                    <i class="bi bi-github bi-lg"></i>
+                </div>
+                <div class="col">
+                    <p class="m-0 text-center text-white">Katherin Velez</p>
+                    <i class="bi bi-github bi-lg"></i>
+                </div>
+                <div class="col">
+                    <p class="m-0 text-center text-white">Nestor Fabian Zapata</p>
+                    <i class="bi bi-github bi-lg"></i>
+                </div>
+                <div class="col">
+                    <p class="m-0 text-center text-white">Cristian Camilo Mesa</p>
+                    <i class="bi bi-github bi-lg"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
