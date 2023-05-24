@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#About">Domicilios</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -33,7 +33,7 @@
                     <form class="d-flex">
                         <button class="btn btn-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart
+                            Compras
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
@@ -42,7 +42,7 @@
         </nav>
         <header >
             <div>
-                <div id="carouselExampleDark" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -52,15 +52,22 @@
                       <div class="carousel-item active" data-bs-interval="2000">
                         <img src="./img/b1.jpeg" class="d-block w-100" alt="bg1">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5>Pan Con Cafesito</h5>
-                          <p>Es el original!! del que todos hablan en interner</p>
+                          <h5>Coffe & Croissant</h5>
+                          <p>¡Descubre una experiencia única con nuestro Coffe & Croissant! </p>
                         </div>
                       </div>
                       <div class="carousel-item" data-bs-interval="2000">
                         <img src="./img/b2.jpeg" class="d-block w-100" alt="bg2">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Pan Fresco</h5>
-                          <p>Más Fresco que Culo de Pingüino</p>
+                          <p>Descubre la frescura y el sabor incomparables en nuestra panadería.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./img/coffe2.jpeg" class="d-block w-100" alt="bg3">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Premium Coffee</h5>
+                          <p>Sumérgete en un mundo de sabores refinados y aromas cautivadores.</p>
                         </div>
                       </div>
                     </div>
@@ -83,9 +90,9 @@
                             <img class="card-img-top" src="./img/1.jpg" alt="img1" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder">Galletas de Chocolate</h5>
-                                    <p class="card-text">Deliciosas galletas de chocolate que te harán perder el control.</p>
-                                    $10.000 Cop
+                                    <h5 class="fw-bolder">Galletas con Chocolate</h5>
+                                    <p class="card-text">Irresistibles galletas de chocolate, un placer para tus sentidos.</p> <br>
+                                    <span class="text-muted  fw-bold">$10.000</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -99,8 +106,8 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Macarons</h5>
-                                    <p class="card-text">Exquisitos macarons de chocolate, una tentación irresistiblemente dulce y suave</p>
-                                    $5.000 c/u cop
+                                    <p class="card-text">Exquisitos macarons de chocolate, una tentación irresistible, suave y deliciosa</p> <br>
+                                    <span class="text-muted  fw-bold">$5.000</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -114,8 +121,8 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Cheescake de Fresa</h5>
-                                    <p class="card-text">Cheesecake de fresa: el deleite perfecto que despierta tus sentidos</p>
-                                    $8.000 Porcion
+                                    <p class="card-text">Cheesecake de fresa: el deleite perfecto que despierta tus sentidos</p> <br>
+                                    <span class="text-muted  fw-bold">$8.000</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -125,21 +132,15 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <img class="card-img-top" src="./img/4.jpeg" alt="imagen4" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Torta Red Velvet</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
-                                    <p class="card-text">La torta Red Velvet, un placer seductor en cada bocado</p>
-                                    <span class="text-muted text-decoration-line-through">$15.000</span>
-                                    $9.000
+                                    <p class="card-text">Un sueño esponjoso y seductor hecho realidad en forma de una torta Red Velvet</p>
+                                    <span class="text-muted text-decoration-line-through">$15.000</span> <br>
+                                    <span class="text-muted  fw-bold">$9.000</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -149,14 +150,13 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <img class="card-img-top" src="./img/5.jpeg" alt="imagen5" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder">Pastel de chocolate</h5>
-                                    <p class="card-text">Un deleite irresistible el dulce sabor de un exquisito postre</p>
-                                    <span class="text-muted text-decoration-line-through">$15.000</span>
-                                    $8.000 cop
+                                    <h5 class="fw-bolder">Pastel de Chocolate</h5>
+                                    <p class="card-text">Sumérgete en una experiencia celestial con el dulce sabor de nuestro exquisito postre.</p>
+                                    <span class="text-muted text-decoration-line-through">$10.000</span><br>
+                                    <span class="text-muted  fw-bold">$8.000</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -171,14 +171,9 @@
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Cupcakes</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
-                                    <p class="card-text">Cupcakes deliciosos, una explosión de sabor en cada mordisco</p>
-                                    $8.500 c/u
+                                    <p class="card-text">Imagina un pequeño tesoro de placer en forma de un cupcake. Con su aspecto encantador y seductor, es nuestra obra maestra.</p>
+                                    <span class="text-muted  fw-bold">$8.500</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -188,13 +183,12 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <img class="card-img-top" src="./img/7.jpeg" alt="imagen7" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Croissant</h5>
-                                    <p class="card-text">Croissant irresistible: el placer crujiente que te transporta a Francia</p>
-                                    <span class="text-muted text-decoration-line-through fw-bold ">$6.000</span>
+                                    <p class="card-text">Una obra maestra de la repostería francesa que te transporta a las calles de París con cada bocado. Disfutalos por solo:</p>
+                                    <span class="text-muted text-decoration-line-through fw-bold ">$6.000</span><br>
                                     <span class="text-muted  fw-bold">$4.000</span>
                                 </div>
                             </div>
@@ -205,79 +199,51 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="./img/8.jpeg" alt="imagen8" />
-                            <!-- Product details-->
+                            <img class="card-img-top" src="./img/89.jpg" alt="imagen8" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Brownie arandanos</h5>
-                                    <!-- Product price-->
-                                    $12.000 cop
+                                    <h5 class="fw-bolder">Brownie con Arandanos</h5>
+                                    <p class="card-text">Endulza tu tarde con este rico Brownie con Arandanos para cambiar los sabores tradicionales y disfrutar de una rica preparación.</p>
+                                    <span class="text-muted  fw-bold">$12.000</span>
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/9.jpeg" alt="imagen9" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">New york Rolls</h5>
-                                    <!-- Product reviews-->
+                                    <h5 class="fw-bolder">New York Rolls</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
-                                    <p class="card-text">Deliciosas galletas artesanales, el dulce placer en cada bocado</p>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$6.000</span>
-                                    $5.000
+                                    <p class="card-text">Cada rollo es un bocado de deleite que combina texturas y sabores en perfecta armonía.</p><br>
+                                    <span class="text-muted text-decoration-line-through fw-bold ">$6.000</span><br>
+                                    <span class="text-muted  fw-bold">$5.000</span>
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
                             <img class="card-img-top" src="./img/10.jpeg" alt="imagen10" />
-                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Cannoli</h5>
-                                    <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
-                                    <p class="card-text">Exquisitos cannoli rellenos de crema, el postre italiano irresistible</p>
-                                    <!-- Product price-->
-                                    $5.000
+                                    <p class="card-text">Este postre italiano cautivará tus sentidos y te transportará a las calles de Sicilia con sabores y texturas inigualables.</p><br>
+                                    <span class="text-muted  fw-bold">$5.000</span>
                                 </div>
                             </div>
-                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
@@ -519,7 +485,7 @@
           <div class="col-12 col-md-3">
             <h3>CONTACTANOS</h3>
             <P>SOMOS LOS MEJORES........</P>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63456.70989431944!2d-75.6756365783203!3d6.257886000000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297188fbb229%3A0x656943c94a762172!2sBIMBO%20Expendio!5e0!3m2!1ses!2sco!4v1684882090017!5m2!1ses!2sco" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.98224123633!2d-75.66605080008834!3d6.243202309796886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442859d833cfa3%3A0xa3fca5c91547777f!2sCESDE!5e0!3m2!1ses!2sco!4v1684891893413!5m2!1ses!2sco" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
