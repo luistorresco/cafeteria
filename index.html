@@ -15,11 +15,11 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary  bg-dark text-light fixed-top">
             <div class="container-fluid px-4 px-lg-5">
                 <button onclick="cambiarTema()" class="btn btn-light"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
-                <a class="navbar-brand" href="#!">Cafeteria Zumbambico</a>
+                <a class="navbar-brand" href="#carouselExampleDark">Cafeteria Zumbambico</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#carouselExampleDark">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#About">Domicilios</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
@@ -479,6 +479,27 @@
                     </select>
                   </div>
                 </div>
+                <div class="col-12 col-md-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="bi bi-clock-fill"></i>
+                        </span>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>selecione hora</option>
+                            <option value="1">1pm - 2pm</option>
+                            <option value="2">3pm - 4pm</option>
+                            <option value="3">5pm - 6pm</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="bi bi-signpost-split"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="direccion"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <button type="button" class="btn btn-success">Enviar</button>
               </div>
             </form>
           </div>
@@ -491,12 +512,31 @@
       </div>
     </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright 2023</p></div>
-            <div class="container"><p class="m-0 text-center text-white">Luis Fernando Torres Correa</p></div>
-            <div class="container"><p class="m-0 text-center text-white">Katherin Velez</p></div>
-            <div class="container"><p class="m-0 text-center text-white">Nestor Fabian Zapata</p></div>
-            <div class="container"><p class="m-0 text-center text-white">Cristian Camilo Mesa</p></div>
+        <footer class="py-5 bg-secondary">
+            <div class="container text-center">
+                <div class="row align-items-center">
+              <div class="col">
+                <p class="m-0 text-center text-white">Luis Fernando Torres Correa</p>
+                <i class="bi bi-github bi-lg"></i>
+              </div>
+              <div class="col">
+                <p class="m-0 text-center text-white">Katherin Velez</p>
+                <i class="bi bi-github bi-lg"></i>
+              </div>
+              <div class="col">
+                <p class="m-0 text-center text-white">Nestor Fabian Zapata</p>
+                <i class="bi bi-github bi-lg"></i>
+              </div>
+              <div class="col">
+                <p class="m-0 text-center text-white">Cristian Camilo Mesa</p>
+                <i class="bi bi-github bi-lg"></i>
+              </div>
+                </div>
+            </div>
+
+            <p class=" text-center text-white">Copyright 2023</p>
+        
+
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
