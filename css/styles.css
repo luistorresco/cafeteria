@@ -27,3 +27,9 @@
   background-position: top center;
   background-attachment: fixed;
 }
+
+.bi {
+  height: 18px;
+  width: 18px;
+  color:#dc3545;
+}
